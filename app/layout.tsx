@@ -1,7 +1,8 @@
 import { cn } from '@/lib/utils';
 import { Fira_Code } from 'next/font/google';
-import './globals.css';
 import { Metadata } from 'next';
+import './globals.css';
+import 'animate.css/animate.compat.css';
 
 const firaCodeFont = Fira_Code({ subsets: ['latin'] });
 

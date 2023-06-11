@@ -14,6 +14,7 @@ import { MdEmail } from 'react-icons/md';
 import profilePict from '@/assets/images/profile-pict.jpg';
 import shiningStarsLottie from '@/assets/lottie/38319-shining-stars.json';
 import Lottie from '@/components/ui/lottie';
+import AOS from '@/components/containers/scroll-animation';
 
 const links = [
   {
@@ -47,29 +48,40 @@ const Intro = () => {
     <section
       id="intro"
       className="min-h-[100vh] flex flex-col justify-center gap-8">
-      <div
+      <AOS
+        animateIn="fadeIn"
+        delay={100}
         style={{ backgroundImage: `url('${profilePict.src}')` }}
         className="w-20 h-20 bg-cover rounded-full"
       />
 
       <div className="relative">
-        <h1
-          id="heading"
-          className="text-4xl lg:text-5xl font-bold max-w-md text-gray-800">
-          Front-End Developer
-        </h1>
+        <AOS animateIn="fadeIn" className="inline-block">
+          <h1
+            id="heading"
+            className="text-4xl lg:text-5xl font-bold text-gray-800">
+            Front-End
+            <br />
+            Developer
+          </h1>
+        </AOS>
         <Lottie
           animationData={shiningStarsLottie}
           className="absolute left-0 top-0 bottom-0 z-[1]"
         />
       </div>
 
-      <p id="subheading" className="lg:text-xl">
-        Hi, I'm Khairul. A passionate Front-End Developer based in Kalimantan
-        Barat, Indonesia. 🌳
-      </p>
+      <AOS animateIn="fadeInUp">
+        <p id="subheading" className="lg:text-xl">
+          Hi, I'm Khairul. A passionate Front-End Developer based in Kalimantan
+          Barat, Indonesia. 🌳
+        </p>
+      </AOS>
 
-      <div className="flex items-center flex-wrap -mx-3 text-slate-800">
+      <AOS
+        delay={500}
+        animateIn="fadeInUp"
+        className="flex items-center flex-wrap -mx-3 text-slate-800">
         {links.map((link) => (
           <Tooltip key={link.name} title={link.name}>
             <Button asChild size="sm" variant="ghost" className="text-2xl">
@@ -79,9 +91,12 @@ const Intro = () => {
             </Button>
           </Tooltip>
         ))}
-      </div>
+      </AOS>
 
-      <div className="md:flex items-start lg:mt-20">
+      <AOS
+        delay={1000}
+        animateIn="fadeIn"
+        className="md:flex items-start lg:mt-20">
         <p className="inline-block border-r pr-3 mr-4 text-sm font-medium mt-1 mb-3 md:mb-0">
           Tech Stack
         </p>
@@ -92,7 +107,7 @@ const Intro = () => {
             </Tooltip>
           ))}
         </div>
-      </div>
+      </AOS>
     </section>
   );
 };
