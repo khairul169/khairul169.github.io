@@ -10,11 +10,11 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
+import Lottie from '@/components/ui/lottie';
+import AOS from '@/components/containers/scroll-animation';
 
 import profilePict from '@/assets/images/profile-pict.jpg';
 import shiningStarsLottie from '@/assets/lottie/38319-shining-stars.json';
-import Lottie from '@/components/ui/lottie';
-import AOS from '@/components/containers/scroll-animation';
 
 const links = [
   {
@@ -47,7 +47,7 @@ const Intro = () => {
   return (
     <section
       id="intro"
-      className="min-h-[100vh] flex flex-col justify-center gap-8">
+      className="min-h-[100vh] flex flex-col justify-center gap-8 py-10">
       <AOS
         animateIn="fadeIn"
         delay={100}
@@ -94,7 +94,7 @@ const Intro = () => {
       </AOS>
 
       <AOS
-        delay={1000}
+        delay={500}
         animateIn="fadeIn"
         className="md:flex items-start lg:mt-20">
         <p className="inline-block border-r pr-3 mr-4 text-sm font-medium mt-1 mb-3 md:mb-0">
@@ -103,7 +103,11 @@ const Intro = () => {
         <div className="flex items-center flex-wrap flex-1 gap-3 md:gap-5 text-2xl lg:text-3xl">
           {techStacks.map((stack) => (
             <Tooltip key={stack.name} title={stack.name}>
-              {stack.icon}
+              <a
+                id={stack.name.toLowerCase()}
+                href={`#${stack.name.toLowerCase()}`}>
+                {stack.icon}
+              </a>
             </Tooltip>
           ))}
         </div>
