@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn('light', firaCodeFont.className)}>{children}</body>
+      <body className={cn('dark', firaCodeFont.className)}>{children}</body>
     </html>
   );
 }

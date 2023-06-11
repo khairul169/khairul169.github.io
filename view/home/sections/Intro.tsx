@@ -59,7 +59,7 @@ const Intro = () => {
         <AOS animateIn="fadeIn" className="inline-block">
           <h1
             id="heading"
-            className="text-4xl lg:text-5xl font-bold text-gray-800">
+            className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white">
             Front-End
             <br />
             Developer
@@ -81,7 +81,7 @@ const Intro = () => {
       <AOS
         delay={500}
         animateIn="fadeInUp"
-        className="flex items-center flex-wrap -mx-3 text-slate-800">
+        className="flex items-center flex-wrap -mx-3 text-slate-800 dark:text-white/75">
         {links.map((link) => (
           <Tooltip key={link.name} title={link.name}>
             <Button asChild size="sm" variant="ghost" className="text-2xl">
