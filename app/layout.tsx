@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: 'website',
-    url: 'https://www.khairul.my.id',
+    url: 'https://rul.sh',
     title,
     description,
     siteName: title,
-    images: [{ url: 'https://www.khairul.my.id/icon.png' }],
+    images: [{ url: 'https://rul.sh/icon.png' }],
   },
 };
 
@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn('light', firaCodeFont.className)}>{children}</body>
+      <body className={cn('dark', firaCodeFont.className)}>{children}</body>
     </html>
   );
 }

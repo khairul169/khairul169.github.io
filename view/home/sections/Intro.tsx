@@ -30,17 +30,23 @@ const links = [
   {
     name: 'Email',
     icon: <MdEmail className="text-3xl" />,
-    url: 'mailto:me@khairul.my.id',
+    url: 'mailto:khai@rul.sh',
   },
 ];
 
 const techStacks = [
   { name: 'Typescript', icon: <SiTypescript color="#007acc" /> },
   { name: 'React', icon: <SiReact color="#65d9fc" /> },
-  { name: 'Next.js', icon: <SiNextdotjs color="#000000" /> },
+  {
+    name: 'Next.js',
+    icon: <SiNextdotjs className="text-[#000000] dark:text-[#ffffff]" />,
+  },
   { name: 'Svelte', icon: <SiSvelte color="#ff3c00" /> },
   { name: 'Tailwindcss', icon: <SiTailwindcss color="#389bb1" /> },
-  { name: 'Cypress', icon: <SiCypress color="#1b1e2e" /> },
+  {
+    name: 'Cypress',
+    icon: <SiCypress className="text-[#000000] dark:text-[#dedede]" />,
+  },
 ];
 
 const Intro = () => {
@@ -59,7 +65,7 @@ const Intro = () => {
         <AOS animateIn="fadeIn" className="inline-block">
           <h1
             id="heading"
-            className="text-4xl lg:text-5xl font-bold text-gray-800">
+            className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white">
             Front-End
             <br />
             Developer
@@ -81,7 +87,7 @@ const Intro = () => {
       <AOS
         delay={500}
         animateIn="fadeInUp"
-        className="flex items-center flex-wrap -mx-3 text-slate-800">
+        className="flex items-center flex-wrap -mx-3 text-slate-800 dark:text-white">
         {links.map((link) => (
           <Tooltip key={link.name} title={link.name}>
             <Button asChild size="sm" variant="ghost" className="text-2xl">
