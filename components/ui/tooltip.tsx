@@ -33,7 +33,7 @@ export type TooltipProps = React.ComponentProps<typeof TooltipContent> & {
 
 const Tooltip = ({ children, title, content, ...restProps }: TooltipProps) => (
   <Provider>
-    <Root delayDuration={100}>
+    <Root delayDuration={0}>
       <Trigger asChild>{children}</Trigger>
       <Portal>
         <TooltipContent {...restProps}>

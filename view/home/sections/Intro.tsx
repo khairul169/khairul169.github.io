@@ -5,9 +5,11 @@ import {
   SiCypress,
   SiNextdotjs,
   SiReact,
-  SiSvelte,
-  SiTailwindcss,
+  // SiSvelte,
+  SiExpress,
+  SiPostgresql,
   SiTypescript,
+  SiTailwindcss,
 } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
 import Lottie from '@/components/ui/lottie';
@@ -28,7 +30,7 @@ const links = [
     url: 'https://github.com/khairul169',
   },
   {
-    name: 'Email',
+    name: 'Email to khai@rul.sh',
     icon: <MdEmail className="text-3xl" />,
     url: 'mailto:khai@rul.sh',
   },
@@ -36,17 +38,25 @@ const links = [
 
 const techStacks = [
   { name: 'Typescript', icon: <SiTypescript color="#007acc" /> },
-  { name: 'React', icon: <SiReact color="#65d9fc" /> },
-  {
-    name: 'Next.js',
-    icon: <SiNextdotjs className="text-[#000000] dark:text-[#ffffff]" />,
-  },
-  { name: 'Svelte', icon: <SiSvelte color="#ff3c00" /> },
+  { name: 'React & React Native', icon: <SiReact color="#65d9fc" /> },
   { name: 'Tailwindcss', icon: <SiTailwindcss color="#389bb1" /> },
   {
-    name: 'Cypress',
-    icon: <SiCypress className="text-[#000000] dark:text-[#dedede]" />,
+    name: 'Next.js',
+    icon: <SiNextdotjs className="text-[#000000] dark:text-white" />,
   },
+  {
+    name: 'Express',
+    icon: <SiExpress className="text-[#333] dark:text-white" />,
+  },
+  {
+    name: 'Postgresql',
+    icon: <SiPostgresql className="text-[#31648c] dark:text-white" />,
+  },
+  // { name: 'Svelte', icon: <SiSvelte color="#ff3c00" /> },
+  // {
+  //   name: 'Cypress',
+  //   icon: <SiCypress className="text-[#000000] dark:text-[#fff]" />,
+  // },
 ];
 
 const Intro = () => {
@@ -66,7 +76,7 @@ const Intro = () => {
           <h1
             id="heading"
             className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white">
-            Front-End
+            Software
             <br />
             Developer
           </h1>
@@ -79,8 +89,8 @@ const Intro = () => {
 
       <AOS animateIn="fadeInUp">
         <p id="subheading" className="lg:text-xl">
-          Hi, I'm Khairul. A passionate Front-End Developer based in Kalimantan
-          Barat, Indonesia. 🌳
+          Hi, I'm Khairul 👋. A passionate Software Developer based in
+          Kalimantan Barat, Indonesia.
         </p>
       </AOS>
 
@@ -103,17 +113,20 @@ const Intro = () => {
         delay={500}
         animateIn="fadeIn"
         className="md:flex items-start lg:mt-20">
-        <p className="inline-block border-r pr-3 mr-4 text-sm font-medium mt-1 mb-3 md:mb-0">
+        <p className="inline-block border-r dark:border-r-white pr-3 mr-4 text-sm font-medium mt-1 mb-3 md:mb-0">
           Tech Stack
         </p>
         <div className="flex items-center flex-wrap flex-1 gap-3 md:gap-5 text-2xl lg:text-3xl">
           {techStacks.map((stack) => (
-            <Tooltip key={stack.name} title={stack.name}>
-              <a
-                id={stack.name.toLowerCase()}
-                href={`#${stack.name.toLowerCase()}`}>
+            <Tooltip
+              key={stack.name}
+              title={stack.name}
+              className="cursor-default">
+              <button
+                type="button"
+                className="hover:scale-110 transition-transform">
                 {stack.icon}
-              </a>
+              </button>
             </Tooltip>
           ))}
         </div>
