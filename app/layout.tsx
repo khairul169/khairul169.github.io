@@ -6,15 +6,15 @@ import 'animate.css/animate.compat.css';
 
 const firaCodeFont = Fira_Code({ subsets: ['latin'] });
 
-const title = 'Khairul Hidayat | Front-End Developer';
+const title = 'Khairul Hidayat | Software Developer';
 const description =
-  "Hi, I'm Khairul. A passionate Front-End Developer based in Kalimantan Barat, Indonesia.";
+  'Khairul is a passionate Software Developer from Kalimantan Barat, Indonesia.';
 
 export const metadata: Metadata = {
   title,
   description,
   keywords:
-    'khairul169, khairul.my.id, Khairul Hidayat, me@khairul.my.id, Khairul Frontend, Khairul App',
+    'khairul169, khairul.my.id, Khairul Hidayat, me@khairul.my.id, khai@rul.sh, khai.rul.sh, rul.sh, Khairul Frontend, Khairul App',
 
   openGraph: {
     type: 'website',
